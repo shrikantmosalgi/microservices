@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
+		<item key="selection" value="DB connection has been established."/>
+		<item key="wrap" value="true"/>
+		<item key="casesensitive" value="false"/>
+		<item key="wholeword" value="false"/>
+		<item key="incremental" value="false"/>
+		<item key="isRegEx" value="false"/>
+		<list key="findhistory">
+			<item value="DB connection has been established."/>
+			<item value="JdaSalesAndReturns"/>
+			<item value="LOG_PROPERTIES_FILE_NAME"/>
+			<item value="ORDERID_PREPARED_STATEMENT"/>
+			<item value="UPDATE_INV_INVENTORY_JOURNAL_RECORD_STATE"/>
+			<item value="UPDATE_TRL_SALE_LINEITM_RECORD_STATE"/>
+			<item value="DTV.INV_INVENTORY_JOURNAL has been updated"/>
+			<item value="sbh.xcenter.db.password"/>
+			<item value="sbh.xcenter.db.user"/>
+			<item value="sbh.xcenter.db.url"/>
+			<item value="JdaSalesAndReturnsApplication"/>
+		</list>
+		<list key="replacehistory">
+		</list>
+	</section>
+	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
+		<item key="DIALOG_X_ORIGIN" value="1038"/>
+		<item key="DIALOG_Y_ORIGIN" value="246"/>
+		<item key="DIALOG_WIDTH" value="511"/>
+		<item key="DIALOG_HEIGHT" value="523"/>
+		<item key="DIALOG_FONT_NAME" value="1|Segoe UI|9.0|0|WINDOWS|1|-18|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI"/>
+	</section>
+</section>

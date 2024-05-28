@@ -1,0 +1,6 @@
+1713950844717	Rename resource 'log4j2.xml'
+1713951145989	Rename resource 'log4j.xml'
+1713951389585	Delete element
+1713951734272	Move 'log4j2.xml' to 'src'
+1713951831632	Move 'log4j2.xml' to 'JDA-SalesAndReturns'
+1713952108429	Move 'log4j2.xml' to 'resources'
