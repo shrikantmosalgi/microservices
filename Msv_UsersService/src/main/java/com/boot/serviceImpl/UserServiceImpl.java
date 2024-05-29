@@ -1,17 +1,13 @@
 package com.boot.serviceImpl;
 
-import java.util.ArrayList;
-
+import java.util.Arrays;
 import java.util.List;
 
-import java.util.Optional;
-
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import com.boot.entity.Hotel;
 import com.boot.entity.Rating;
 import com.boot.entity.User;
 import com.boot.repository.UserRepository;
@@ -44,10 +40,17 @@ public class UserServiceImpl implements UserService{
 		// TODO Auto-generated method stub
 		 User user =userRepository.findById(userId).orElseThrow();
 		 
-		String s = "http://localhost:8083/getUserRating/"+userId;
 		 //fetch rating of above user from rating service
-		ArrayList<Rating> r= restTemplate.getForObject("http://localhost:8083/getUserRating/"+user.getId(),ArrayList.class);
-		user.setRatings(r);
+		 Rating[] ratingOfUser= restTemplate.getForObject("http://localhost:8083/getUserRating/"+user.getId(),Rating[].class);
+		 List<Rating> ratingList =Arrays.stream(ratingOfUser).toList();//convert array to list
+		 
+		 for(Rating r :ratingList) {
+			 
+			Hotel h = restTemplate.getForObject("http://localhost:8082/getHotel/"+r.getHotelId(),Hotel.class);
+			r.setHotel(h);
+		 }
+		
+		user.setRatings(ratingList);
 		 return user ;
 	}
 
