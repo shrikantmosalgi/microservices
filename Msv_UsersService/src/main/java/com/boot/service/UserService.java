@@ -12,5 +12,5 @@ public interface UserService {
 	
 	List<User> getAllUsers();
 	
-	Optional<User> getUser(int userId);
+	User getUser(int userId);
 }

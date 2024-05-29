@@ -27,8 +27,8 @@ public class UserController {
 	}
 	
 	@GetMapping("/getUser/{userId}")
-	public Optional<User> getUser(@PathVariable int userId) {
-		Optional<User> u =userServiceImpl.getUser(userId);
+	public User getUser(@PathVariable int userId) {
+		User u =userServiceImpl.getUser(userId);
 		return u;
 	}
 	

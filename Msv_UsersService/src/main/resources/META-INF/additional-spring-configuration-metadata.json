@@ -8,5 +8,55 @@
     "name": "spring.datasource.driver.class",
     "type": "java.lang.String",
     "description": "A description for 'spring.datasource.driver.class'"
+  },
+  {
+    "name": "log4j.appender.file.File",
+    "type": "java.lang.String",
+    "description": "A description for 'log4j.appender.file.File'"
+  },
+  {
+    "name": "log4j.rootLogger",
+    "type": "java.lang.String",
+    "description": "A description for 'log4j.rootLogger'"
+  },
+  {
+    "name": "log4j.appender.file.MaxFileSize",
+    "type": "java.lang.String",
+    "description": "A description for 'log4j.appender.file.MaxFileSize'"
+  },
+  {
+    "name": "log4j.appender.file.MaxBackupIndex",
+    "type": "java.lang.String",
+    "description": "A description for 'log4j.appender.file.MaxBackupIndex'"
+  },
+  {
+    "name": "log4j.appender.file.layout",
+    "type": "java.lang.String",
+    "description": "A description for 'log4j.appender.file.layout'"
+  },
+  {
+    "name": "log4j.appender.FILE.layout.ConversionPattern",
+    "type": "java.lang.String",
+    "description": "A description for 'log4j.appender.FILE.layout.ConversionPattern'"
+  },
+  {
+    "name": "log4j.appender.FILE.File",
+    "type": "java.lang.String",
+    "description": "A description for 'log4j.appender.FILE.File'"
+  },
+  {
+    "name": "log4j.appender.FILE",
+    "type": "java.lang.String",
+    "description": "A description for 'log4j.appender.FILE'"
+  },
+  {
+    "name": "log4j.rootLogger",
+    "type": "java.lang.String",
+    "description": "A description for 'log4j.rootLogger'"
+  },
+  {
+    "name": "log4j.appender.FILE.layout.conversionPattern",
+    "type": "java.lang.String",
+    "description": "A description for 'log4j.appender.FILE.layout.conversionPattern'"
   }
 ]}
