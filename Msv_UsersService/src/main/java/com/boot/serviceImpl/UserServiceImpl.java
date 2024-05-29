@@ -46,8 +46,8 @@ public class UserServiceImpl implements UserService{
 		 
 		String s = "http://localhost:8083/getUserRating/"+userId;
 		 //fetch rating of above user from rating service
-		ArrayList<Rating> l= restTemplate.getForObject("http://localhost:8083/getUserRating/"+user.getId(),ArrayList.class);
-		user.setRatings(l);
+		ArrayList<Rating> r= restTemplate.getForObject("http://localhost:8083/getUserRating/"+user.getId(),ArrayList.class);
+		user.setRatings(r);
 		 return user ;
 	}
 
