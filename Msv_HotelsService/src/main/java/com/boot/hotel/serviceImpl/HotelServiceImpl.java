@@ -1,7 +1,6 @@
 package com.boot.hotel.serviceImpl;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,8 +26,8 @@ public class HotelServiceImpl implements HotelService{
 	}
 
 	@Override
-	public Optional<Hotel> getHotel(int id) {
-		return hotelRepository.findById(id);
+	public Hotel getHotel(int id) {
+		return hotelRepository.findById(id).orElseThrow();
 	}
 
 }
