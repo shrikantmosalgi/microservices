@@ -1,7 +1,6 @@
 package com.boot.hotel.controller;
 
 import java.util.List;
-import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -25,7 +24,7 @@ public class HotelController {
 	}
 	
 	@GetMapping("/getHotel/{id}")
-	public Optional<Hotel> getHotel(@PathVariable int id) {
+	public Hotel getHotel(@PathVariable int id) {
 		return hotelService.getHotel(id);
 		
 	}
