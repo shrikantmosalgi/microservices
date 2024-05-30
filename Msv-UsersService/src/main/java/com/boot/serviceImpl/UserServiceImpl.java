@@ -41,12 +41,12 @@ public class UserServiceImpl implements UserService{
 		 User user =userRepository.findById(userId).orElseThrow();
 		 
 		 //fetch rating of above user from rating service
-		 Rating[] ratingOfUser= restTemplate.getForObject("http://localhost:8083/getUserRating/"+user.getId(),Rating[].class);
+		 Rating[] ratingOfUser= restTemplate.getForObject("http://MSV-RATINGSSERVICE/getUserRating/"+user.getId(),Rating[].class);
 		 List<Rating> ratingList =Arrays.stream(ratingOfUser).toList();//convert array to list
 		 
 		 for(Rating r :ratingList) {
 			 
-			Hotel h = restTemplate.getForObject("http://localhost:8082/getHotel/"+r.getHotelId(),Hotel.class);
+			Hotel h = restTemplate.getForObject("http://MSV-HOTELSSERVICE/getHotel/"+r.getHotelId(),Hotel.class);
 			r.setHotel(h);
 		 }
 		
