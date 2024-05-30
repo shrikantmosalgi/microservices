@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.boot.hotel</groupId>
-	<artifactId>Msv_HotelsService</artifactId>
+	<artifactId>Msv-HotelsService</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Msv_HotelsService</name>
+	<name>Msv-HotelsService</name>
 	<description>Demo project for microservice</description>
 	<properties>
 		<java.version>17</java.version>
