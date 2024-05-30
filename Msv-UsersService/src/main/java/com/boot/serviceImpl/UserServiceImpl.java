@@ -10,6 +10,7 @@ import org.springframework.web.client.RestTemplate;
 import com.boot.entity.Hotel;
 import com.boot.entity.Rating;
 import com.boot.entity.User;
+import com.boot.external.service.HotelService;
 import com.boot.repository.UserRepository;
 import com.boot.service.UserService;
 
@@ -18,6 +19,10 @@ public class UserServiceImpl implements UserService{
 	
 	@Autowired
 	private UserRepository userRepository;
+	
+	//fignclient service
+	@Autowired
+	private HotelService hotelService;     
 	
 	// for calling another service methods
 	@Autowired
@@ -46,7 +51,12 @@ public class UserServiceImpl implements UserService{
 		 
 		 for(Rating r :ratingList) {
 			 
-			Hotel h = restTemplate.getForObject("http://MSV-HOTELSSERVICE/getHotel/"+r.getHotelId(),Hotel.class);
+			 //this is using restTemplate
+			//Hotel h = restTemplate.getForObject("http://MSV-HOTELSSERVICE/getHotel/"+r.getHotelId(),Hotel.class);
+			 
+			 // this is using fignclient
+			 Hotel h= hotelService.getHotel(r.getHotelId());
+			 
 			r.setHotel(h);
 		 }
 		
