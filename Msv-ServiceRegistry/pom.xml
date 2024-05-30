@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.boot.serviceRegistry</groupId>
-	<artifactId>Msv_ServiceRegistry</artifactId>
+	<artifactId>Msv-ServiceRegistry</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>Msv_ServiceRegistry</name>
+	<name>Msv-ServiceRegistry</name>
 	<description>Demo project for microservice</description>
 	<properties>
 		<java.version>17</java.version>
