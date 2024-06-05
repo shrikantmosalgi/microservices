@@ -4,3 +4,7 @@
 1716876839368	Delete resource 'BootBatchFileToDb'
 1716876858722	Delete resource 'RestApiProject'
 1716877299125	Delete resource 'JDA-SalesAndReturns'
+1717050491662	Rename resource 'Msv_UsersService'
+1717050516203	Rename resource 'Msv_ServiceRegistry'
+1717050530090	Rename resource 'Msv_RatingsService'
+1717050544579	Rename resource 'Msv_HotelsService'

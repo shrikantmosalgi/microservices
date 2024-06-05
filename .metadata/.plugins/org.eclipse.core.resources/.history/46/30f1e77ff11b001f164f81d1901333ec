@@ -1,7 +1,0 @@
-spring.application.name=Msv_ServiceRegistry
-eureka.instance.hostname=localhost
-#to avoid servet to self register
-eureka.client.register-with-eureka=false
-eureka.client.fetch-registry=false
-#default eureka server port
-#server.port=8761

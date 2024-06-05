@@ -1,6 +1,0 @@
-spring.application.name=Msv_RatingsService
-spring.datasource.url = jdbc:oracle:thin:@localhost:1521:xstore 
-spring.datasource.username=shrikant
-spring.datasource.password=shrikant
-spring.datasource.driver.class=oracle.jdbc.driver.OracleDriver
-server.port=8083
