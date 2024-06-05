@@ -11,6 +11,7 @@ import com.boot.entity.Hotel;
 import com.boot.entity.Rating;
 import com.boot.entity.User;
 import com.boot.external.service.HotelService;
+import com.boot.external.service.RatingService;
 import com.boot.repository.UserRepository;
 import com.boot.service.UserService;
 
@@ -19,6 +20,9 @@ public class UserServiceImpl implements UserService{
 	
 	@Autowired
 	private UserRepository userRepository;
+	
+	@Autowired
+	RatingService ratingService;
 	
 	//fignclient service
 	@Autowired
@@ -46,8 +50,9 @@ public class UserServiceImpl implements UserService{
 		 User user =userRepository.findById(userId).orElseThrow();
 		 
 		 //fetch rating of above user from rating service
-		 Rating[] ratingOfUser= restTemplate.getForObject("http://MSV-RATINGSSERVICE/getUserRating/"+user.getId(),Rating[].class);
-		 List<Rating> ratingList =Arrays.stream(ratingOfUser).toList();//convert array to list
+		// Rating[] ratingOfUser= restTemplate.getForObject("http://MSV-RATINGSSERVICE/getUserRating/"+user.getId(),Rating[].class);
+		 List<Rating> ratingList =ratingService.getUserRatings(user.getId());  //if not work then uncomment above lune
+		 //List<Rating> ratingList =Arrays.stream(ratingOfUser).toList();//convert array to list
 		 
 		 for(Rating r :ratingList) {
 			 
