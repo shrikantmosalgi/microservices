@@ -103,5 +103,25 @@
     "name": "spring.cloud.gateway.routes3.predicates[0]",
     "type": "java.lang.String",
     "description": "A description for 'spring.cloud.gateway.routes3.predicates[0]'"
+  },
+  {
+    "name": "spring.cloud.gateway.routes1.predicates[0]",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.cloud.gateway.routes1.predicates[0]'"
+  },
+  {
+    "name": "spring.cloud.gateway.routes1.predicates",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.cloud.gateway.routes1.predicates'"
+  },
+  {
+    "name": "spring.cloud.gateway.routes2.predicates",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.cloud.gateway.routes2.predicates'"
+  },
+  {
+    "name": "spring.cloud.gateway.routes3.predicates",
+    "type": "java.lang.String",
+    "description": "A description for 'spring.cloud.gateway.routes3.predicates'"
   }
 ]}
