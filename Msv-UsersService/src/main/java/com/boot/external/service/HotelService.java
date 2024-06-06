@@ -10,6 +10,7 @@ import com.boot.entity.Hotel;
 public interface HotelService {
 
 	// here in external service while writing url please write full url not onlt which is in mapping
-	@GetMapping("hotel/getHotel/{id}")
+	
+	@GetMapping("/hotel/getHotel/{id}")
 	Hotel getHotel(@PathVariable int id);
 }

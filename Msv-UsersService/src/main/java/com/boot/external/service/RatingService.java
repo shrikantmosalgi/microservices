@@ -12,12 +12,13 @@ import com.boot.entity.Rating;
 @FeignClient(name="MSV-RATINGSSERVICE")
 public interface RatingService {
 
+	// here in external service while writing url please write full url not onlt which is in mapping
+
 	
-	@PostMapping("rating/createRating")
+	@PostMapping("/rating/createRating")
 	Rating createRating(@RequestBody Rating rating);
 	
-	// here in external service while writing url please write full url not onlt which is in mapping
-	@GetMapping("rating/getUserRating/{userId}") 
+	@GetMapping("/rating/getUserRating/{userId}") 
 	List<Rating> getUserRatings(@PathVariable int userId);
 	
 }
