@@ -12,6 +12,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.boot.entity.User;
 import com.boot.serviceImpl.UserServiceImpl;
 
+import io.github.resilience4j.circuitbreaker.annotation.CircuitBreaker;
+
 @RestController
 @RequestMapping("/user")
 public class UserController {
@@ -27,10 +29,24 @@ public class UserController {
 	}
 	
 	@GetMapping("/getUser/{userId}")
+	@CircuitBreaker(name = "ratingHotelBreaker",fallbackMethod = "ratingHotelFallback")  //this is required when any service is doun
 	public User getUser(@PathVariable int userId) {
 		User u =userServiceImpl.getUser(userId);
 		return u;
 	}
+	
+	//creating fallback method for circuitbreaker
+	public User ratingHotelFallback(int userId, Exception ex) {  //return type should be same as calling method
+		
+		System.out.println("fallback is executed because service is down"+ ex.getMessage());
+		User u = new User();
+		u.setId(0);
+		u.setName("dummy user");
+		u.setEmail("dummy@gmail.com");
+		return u;
+		
+	}
+	
 	
 	public List<User> getAllUsers() {
 		List<User> users =userServiceImpl.getAllUsers();

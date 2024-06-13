@@ -22,11 +22,11 @@ public class UserServiceImpl implements UserService{
 	private UserRepository userRepository;
 	
 	@Autowired
-	RatingService ratingService;
+	RatingService ratingService;  //this is external service
 	
 	//fignclient service
 	@Autowired
-	private HotelService hotelService;     
+	private HotelService hotelService;     //this is external service
 	
 	// for calling another service methods
 	@Autowired
@@ -51,7 +51,7 @@ public class UserServiceImpl implements UserService{
 		 
 		 //fetch rating of above user from rating service
 		// Rating[] ratingOfUser= restTemplate.getForObject("http://MSV-RATINGSSERVICE/getUserRating/"+user.getId(),Rating[].class);
-		 List<Rating> ratingList =ratingService.getUserRatings(user.getId());  //if not work then uncomment above lune
+		 List<Rating> ratingList =ratingService.getUserRatings(user.getId()); 
 		 //List<Rating> ratingList =Arrays.stream(ratingOfUser).toList();//convert array to list
 		 
 		 for(Rating r :ratingList) {
